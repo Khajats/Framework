@@ -1,7 +1,5 @@
 package page1;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +11,7 @@ import org.testng.annotations.Test;
 public class LoginTest {
 
 	@Parameters("browser")
-	@Test(groups = {"smoke"},description = "login with invalid credential--sanity")
+	@Test(groups = {"smoke"})
 	public void loginWithValidCredential(String browsername) {
 		WebDriver driver = null;
 		if(browsername.equalsIgnoreCase("chrome")) {
@@ -22,7 +20,7 @@ public class LoginTest {
 			driver = new FirefoxDriver();
 		}
 		driver.get("https://www.flipkart.com/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//button[text()='✕']")).click();
 		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("mobiles",Keys.ENTER);
 		driver.quit();

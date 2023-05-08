@@ -1,5 +1,7 @@
 package page1;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +22,7 @@ public class LoginTest {
 			driver = new FirefoxDriver();
 		}
 		driver.get("https://www.flipkart.com/");
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//button[text()='✕']")).click();
 		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("mobiles",Keys.ENTER);
 		driver.quit();

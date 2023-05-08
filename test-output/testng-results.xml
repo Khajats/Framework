@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-08T11:43:39 IST" name="Suite" finished-at="2023-05-08T11:43:39 IST" duration-ms="119">
+    <groups>
+      <group name="regression">
+        <method signature="RegisterTest.registerWithOutAnyCredential()[pri:0, instance:page1.RegisterTest@1b7cc17c]" name="registerWithOutAnyCredential" class="page1.RegisterTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="LoginTest.loginWithOutAnyCredential()[pri:0, instance:page1.LoginTest@7f0eb4b4]" name="loginWithOutAnyCredential" class="page1.LoginTest"/>
+        <method signature="LoginTest.loginWithValidCredential(java.lang.String,java.lang.reflect.Method)[pri:0, instance:page1.LoginTest@7f0eb4b4]" name="loginWithValidCredential" class="page1.LoginTest"/>
+        <method signature="RegisterTest.registerWithAOutAnyCredential()[pri:0, instance:page1.RegisterTest@1b7cc17c]" name="registerWithAOutAnyCredential" class="page1.RegisterTest"/>
+        <method signature="RegisterTest.registerWithInvalidCradential()[pri:0, instance:page1.RegisterTest@1b7cc17c]" name="registerWithInvalidCradential" class="page1.RegisterTest"/>
+        <method signature="SearchTest.searchValidProduct()[pri:0, instance:page1.SearchTest@4efbca5a]" name="searchValidProduct" class="page1.SearchTest"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="LoginTest.loginWithInvalidCredential()[pri:0, instance:page1.LoginTest@7f0eb4b4]" name="loginWithInvalidCredential" class="page1.LoginTest"/>
+        <method signature="RegisterTest.registerWithValidCredential()[pri:0, instance:page1.RegisterTest@1b7cc17c]" name="registerWithValidCredential" class="page1.RegisterTest"/>
+        <method signature="SearchTest.searchInvalidProduct()[pri:0, instance:page1.SearchTest@4efbca5a]" name="searchInvalidProduct" class="page1.SearchTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2023-05-08T11:43:39 IST" name="Test" finished-at="2023-05-08T11:43:39 IST" duration-ms="119">
+      <class name="page1.RegisterTest">
+        <test-method signature="registerWithAOutAnyCredential()[pri:0, instance:page1.RegisterTest@1b7cc17c]" started-at="2023-05-08T11:43:39 IST" name="registerWithAOutAnyCredential" finished-at="2023-05-08T11:43:39 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithAOutAnyCredential -->
+        <test-method signature="registerWithInvalidCradential()[pri:0, instance:page1.RegisterTest@1b7cc17c]" started-at="2023-05-08T11:43:39 IST" name="registerWithInvalidCradential" finished-at="2023-05-08T11:43:39 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithInvalidCradential -->
+        <test-method signature="registerWithValidCredential()[pri:0, instance:page1.RegisterTest@1b7cc17c]" started-at="2023-05-08T11:43:39 IST" name="registerWithValidCredential" depends-on-groups="smoke" finished-at="2023-05-08T11:43:39 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithValidCredential -->
+        <test-method signature="registerWithOutAnyCredential()[pri:0, instance:page1.RegisterTest@1b7cc17c]" started-at="2023-05-08T11:43:39 IST" name="registerWithOutAnyCredential" depends-on-groups="sanity" finished-at="2023-05-08T11:43:39 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithOutAnyCredential -->
+      </class> <!-- page1.RegisterTest -->
+      <class name="page1.SearchTest">
+        <test-method signature="searchValidProduct()[pri:0, instance:page1.SearchTest@4efbca5a]" started-at="2023-05-08T11:43:39 IST" name="searchValidProduct" finished-at="2023-05-08T11:43:39 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchValidProduct -->
+        <test-method signature="searchInvalidProduct()[pri:0, instance:page1.SearchTest@4efbca5a]" started-at="2023-05-08T11:43:39 IST" name="searchInvalidProduct" depends-on-groups="smoke" finished-at="2023-05-08T11:43:39 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchInvalidProduct -->
+      </class> <!-- page1.SearchTest -->
+      <class name="page1.LoginTest">
+        <test-method signature="loginWithOutAnyCredential()[pri:0, instance:page1.LoginTest@7f0eb4b4]" started-at="2023-05-08T11:43:39 IST" name="loginWithOutAnyCredential" finished-at="2023-05-08T11:43:39 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithOutAnyCredential -->
+        <test-method signature="loginWithValidCredential(java.lang.String,java.lang.reflect.Method)[pri:0, instance:page1.LoginTest@7f0eb4b4]" started-at="2023-05-08T11:43:39 IST" name="loginWithValidCredential" description="login with invalid credential--sanity" finished-at="2023-05-08T11:43:39 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.flipkart.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void page1.LoginTest.loginWithValidCredential(java.lang.String,java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredential -->
+        <test-method signature="loginWithInvalidCredential()[pri:0, instance:page1.LoginTest@7f0eb4b4]" started-at="2023-05-08T11:43:39 IST" name="loginWithInvalidCredential" depends-on-groups="smoke" finished-at="2023-05-08T11:43:39 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidCredential -->
+      </class> <!-- page1.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

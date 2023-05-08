@@ -1,17 +1,31 @@
 package page1;
 
-import java.lang.reflect.Method;
+import java.time.Duration;
 
-import org.testng.annotations.Optional;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginTest {
 
-	@Parameters("url")
+	@Parameters("browser")
 	@Test(groups = {"smoke"},description = "login with invalid credential--sanity")
-	public void loginWithValidCredential(@Optional("https://www.flipkart.com") String url,Method m) {
-		System.out.println("loginWithValidCredential smoke" +Thread.currentThread().getId());
+	public void loginWithValidCredential(String browsername) {
+		WebDriver driver = null;
+		if(browsername.equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
+		}else if(browsername.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		}
+		driver.get("https://www.flipkart.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.findElement(By.xpath("//button[text()='✕']")).click();
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("mobiles",Keys.ENTER);
+		driver.quit();
 	}
 
 	@Test(groups = {"sanity"})

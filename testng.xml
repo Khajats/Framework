@@ -13,6 +13,7 @@
 			<class name="page1.SearchTest" />
 			<class name="page1.RegisterTest" />
 			
+			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

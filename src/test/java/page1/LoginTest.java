@@ -21,10 +21,9 @@ public class LoginTest {
 		}else if(browsername.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		}
-		driver.get("https://www.flipkart.com/");
+		driver.get("https://www.amazon.in/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.findElement(By.xpath("//button[text()='✕']")).click();
-		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("mobiles",Keys.ENTER);
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("mobiles",Keys.ENTER);
 		driver.quit();
 	}
 
